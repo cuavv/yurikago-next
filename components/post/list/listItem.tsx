@@ -24,9 +24,6 @@ const ListItem = ({ post }: Props) => {
               {formattedDate.innerText}
             </time>
           </div>
-
-          {/* 概要 */}
-          <div className="text-muted">{post.excerpt}</div>
         </a>
       </Link>
     </div>
