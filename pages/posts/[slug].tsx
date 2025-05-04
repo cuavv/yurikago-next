@@ -37,10 +37,12 @@ const PostPage = ({ post }: Props) => {
             <title>
               {post.title} | {process.env.NEXT_PUBLIC_SITE_NAME}
             </title>
+            <meta name="description" content={post.excerpt} />
             <meta
               property="og:title"
               content={`${post.title} | ${process.env.NEXT_PUBLIC_SITE_NAME}`}
             />
+            <meta property="og:description" content={post.excerpt} />
             <meta property="og:type" content="article" />
             <meta
               property="og:url"
