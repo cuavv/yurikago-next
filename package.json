@@ -10,9 +10,6 @@
     "lint:eslint": "eslint --ignore-path .gitignore .",
     "lint:prettier": "prettier --ignore-path .gitignore .",
     "prepare": "husky install",
-    "storybook": "start-storybook -p 9001",
-    "build-storybook": "build-storybook",
-    "storycap": "storycap --serverCmd 'yarn storybook' http://localhost:9001 --serverTimeout 600000 --delay 1000",
     "regression": "reg-suit run"
   },
   "dependencies": {
@@ -37,14 +34,6 @@
   },
   "devDependencies": {
     "@babel/core": "7.18.13",
-    "@storybook/addon-actions": "6.5.10",
-    "@storybook/addon-essentials": "6.5.10",
-    "@storybook/addon-interactions": "6.5.10",
-    "@storybook/addon-links": "6.5.10",
-    "@storybook/builder-webpack5": "6.5.10",
-    "@storybook/manager-webpack5": "6.5.10",
-    "@storybook/react": "6.5.10",
-    "@storybook/testing-library": "0.0.13",
     "@types/node": "16.11.56",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
