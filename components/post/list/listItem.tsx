@@ -16,7 +16,7 @@ const ListItem = ({ post }: Props) => {
       <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
         <a className="text-decoration-none text-reset">
           {/* 記事タイトル */}
-          <div className="fw-bold fs-5">{post.title}</div>
+          <div className="fs-5">{post.title}</div>
 
           {/* 作成日 */}
           <div className="text-muted">
