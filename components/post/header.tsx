@@ -1,4 +1,5 @@
 import dayjs from 'dayjs'
+import Tags from '~/components/post/tags'
 import Post from '~/types/post'
 
 type Props = {
@@ -13,12 +14,17 @@ const Header = ({ post }: Props) => {
   return (
     <div className="py-3">
       {/* 作成日 */}
-      <time className="text-muted" dateTime={formattedDate.attribute}>
-        {formattedDate.innerText}
-      </time>
+      <div>
+        <time dateTime={formattedDate.attribute}>
+          {formattedDate.innerText}
+        </time>
+      </div>
+
+      {/* タグ */}
+      <Tags post={post} />
 
       {/* タイトル */}
-      <h1>{post.title}</h1>
+      <h1 className="my-0 py-1">{post.title}</h1>
     </div>
   )
 }
