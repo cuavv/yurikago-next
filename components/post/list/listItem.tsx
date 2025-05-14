@@ -1,5 +1,6 @@
 import dayjs from 'dayjs'
 import Link from 'next/link'
+import Tags from '~/components/post/tags'
 import Post from '~/types/post'
 
 type Props = {
@@ -15,15 +16,18 @@ const ListItem = ({ post }: Props) => {
     <div className="py-3">
       <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
         <a className="text-decoration-none text-reset">
-          {/* 記事タイトル */}
-          <div className="fs-5">{post.title}</div>
-
           {/* 作成日 */}
-          <div className="text-muted">
+          <div>
             <time dateTime={formattedDate.attribute}>
               {formattedDate.innerText}
             </time>
           </div>
+
+          {/* タグ */}
+          <Tags post={post} />
+
+          {/* タイトル */}
+          <h2 className="my-0 py-1">{post.title}</h2>
 
           {/* 概要 */}
           <div className="text-muted">{post.excerpt}</div>
