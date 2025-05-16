@@ -1,18 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:recommended"],
   "labels": ["renovate"],
   "packageRules": [
-    {
-      "groupName": "dependencies (minor)",
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["minor"]
-    },
-    {
-      "groupName": "devDependencies (minor)",
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["minor"]
-    },
     {
       "groupName": "dependencies (patch)",
       "matchDepTypes": ["dependencies"],
@@ -26,6 +16,5 @@
   ],
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
-  "reviewers": ["@krabben16"],
   "timezone": "Asia/Tokyo"
 }
