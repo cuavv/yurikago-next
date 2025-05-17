@@ -17,7 +17,7 @@ const Header = ({ post }: Props) => {
 
       {/* タイトル */}
       {/* note: 既存のマージンを打ち消す */}
-      <h1 className="my-2">{post.title}</h1>
+      <h1 className="my-4">{post.title}</h1>
     </div>
   )
 }
