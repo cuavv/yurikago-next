@@ -1,5 +1,4 @@
 import Post from '~/types/post'
-import 'github-markdown-css'
 
 type Props = {
   post: Post
