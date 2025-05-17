@@ -4,9 +4,11 @@ import remark from 'remark'
 import links from 'remark-external-links'
 import gfm from 'remark-gfm'
 import html from 'remark-html'
+import card from 'remark-link-card'
 
 export default async function markdownToHtml(markdown: string) {
   const result = await remark()
+    .use(card, { shortenUrl: true })
     .use(links)
     .use(gfm)
     .use(shiki, { theme: 'dark-plus' })
