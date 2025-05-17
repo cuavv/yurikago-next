@@ -9,7 +9,7 @@ type Props = {
 
 const ListItem = ({ post }: Props) => {
   return (
-    <div className="py-3">
+    <div className="my-4">
       <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
         <a className="text-decoration-none text-reset">
           {/* 作成日 */}
