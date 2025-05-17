@@ -2,7 +2,6 @@ import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Layout from '~/components/layout/layout'
-import PostComment from '~/components/post/comment'
 import PostContent from '~/components/post/content'
 import PostHeader from '~/components/post/header'
 import { getPostBySlug, getAllPosts } from '~/lib/api'
@@ -58,7 +57,6 @@ const PostPage = ({ post }: Props) => {
           </Head>
           <PostHeader post={post} />
           <PostContent post={post} />
-          <PostComment post={post} />
         </>
       )}
     </Layout>
