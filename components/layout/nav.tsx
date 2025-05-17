@@ -9,7 +9,7 @@ const Nav = () => {
         src="/images/nav/f9796cb6495069a239407bf0e3d5c447.png"
       />
       <Link href="/">
-        <a className="ms-3 text-decoration-none text-reset fs-3">
+        <a className="ms-3 fs-3 text-decoration-none text-reset">
           {process.env.NEXT_PUBLIC_SITE_NAME}
         </a>
       </Link>
