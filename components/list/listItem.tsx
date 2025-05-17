@@ -1,5 +1,5 @@
-import dayjs from 'dayjs'
 import Link from 'next/link'
+import Date from '~/components/post/date'
 import Tags from '~/components/post/tags'
 import Post from '~/types/post'
 
@@ -8,26 +8,19 @@ type Props = {
 }
 
 const ListItem = ({ post }: Props) => {
-  const formattedDate = {
-    attribute: dayjs(post.date).format('YYYY-MM-DD'),
-    innerText: dayjs(post.date).format('YYYY/MM/DD'),
-  }
   return (
-    <div className="py-3">
+    <div className="my-4">
       <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
         <a className="text-decoration-none text-reset">
           {/* 作成日 */}
-          <div>
-            <time dateTime={formattedDate.attribute}>
-              {formattedDate.innerText}
-            </time>
-          </div>
+          <Date post={post} />
 
           {/* タグ */}
           <Tags post={post} />
 
           {/* タイトル */}
-          <h2 className="my-0 py-1">{post.title}</h2>
+          {/* note: 既存のマージンを打ち消す */}
+          <h2 className="my-2">{post.title}</h2>
 
           {/* 概要 */}
           <div className="text-muted">{post.excerpt}</div>
