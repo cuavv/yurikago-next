@@ -1,4 +1,4 @@
-import PostListItem from '~/components/post/list/listItem'
+import PostListItem from '~/components/list/listItem'
 import Post from '~/types/post'
 
 type Props = {

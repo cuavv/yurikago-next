@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '~/components/layout/layout'
-import PostList from '~/components/post/list/list'
+import PostList from '~/components/list/list'
 import { getAllPosts } from '~/lib/api'
 import { createBreadcrumbSchemaObject } from '~/lib/schema/breadcrumb'
 import Breadcrumb from '~/types/breadcrumb'
