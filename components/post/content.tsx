@@ -8,7 +8,7 @@ type Props = {
 const Content = ({ post }: Props) => {
   return (
     <div
-      className="py-3 markdown-body"
+      className="markdown-body"
       dangerouslySetInnerHTML={{ __html: post.content || '' }}
     ></div>
   )

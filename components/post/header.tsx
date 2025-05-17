@@ -12,7 +12,7 @@ const Header = ({ post }: Props) => {
     innerText: dayjs(post.date).format('YYYY/MM/DD'),
   }
   return (
-    <div className="py-3">
+    <div>
       {/* 作成日 */}
       <div>
         <time dateTime={formattedDate.attribute}>
@@ -24,7 +24,8 @@ const Header = ({ post }: Props) => {
       <Tags post={post} />
 
       {/* タイトル */}
-      <h1 className="my-0 py-1">{post.title}</h1>
+      {/* note: 既存のマージンを打ち消す */}
+      <h1 className="my-2">{post.title}</h1>
     </div>
   )
 }
