@@ -27,7 +27,8 @@ const ListItem = ({ post }: Props) => {
           <Tags post={post} />
 
           {/* タイトル */}
-          <h2 className="my-0 py-1">{post.title}</h2>
+          {/* note: 既存のマージンを打ち消す */}
+          <h2 className="my-2">{post.title}</h2>
 
           {/* 概要 */}
           <div className="text-muted">{post.excerpt}</div>
